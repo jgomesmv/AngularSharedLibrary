@@ -9,3 +9,12 @@
     </a>
   </div>
 </section>
+
+<sc-user-form
+  *ngIf="mode !== viewModes.view"
+  class="c-userListItem__form"
+  [user]="user"
+  [mode]="mode"
+  (userSubmited)="onUserUpdated($event)"
+>
+</sc-user-form>
