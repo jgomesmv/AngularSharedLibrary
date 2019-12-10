@@ -37,6 +37,25 @@
           }
         }
       }
-    }},
+    },
+    "storybook": {
+      "root": "projects/shared-components",
+      "sourceRoot": "projects/shared-components/src",
+      "projectType": "library",
+      "prefix": "sc",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/shared-components/tsconfig.lib.json",
+            "project": "projects/shared-components/ng-package.json",
+            "styles": [],
+            "scripts": [],
+            "outputPath": "dist"
+          }
+        }
+      }
+    }
+  },
   "defaultProject": "shared-components"
 }
